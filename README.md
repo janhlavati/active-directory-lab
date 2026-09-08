@@ -5,13 +5,12 @@ Automated Active Directory lab featuring GPO security baselines, Windows LAPS, a
 - Hypervisor - VirtualBox
 - Server - Windows Server 2012 R2
 - Client - Windows Server 2012 R2
-- Logs - Sysmon
-- SIEM - Splunk
+- Security telemetry and threat monitoring - Windows Event Viewer, Windows Advanced Audit Policies and Process Command-Line Logging
 
 # Network Diagram
 
 # Installation and Configuration
-The configuration of Active Directory lab in practice desires one server machine - that will serve as domain controller - and the other one - client machine to test the work of domain. As mentioned earlier, we use VirtualBox as a hypervisor together with Windows Server 2012 R2 installations (server is promoted to domain controller, while the client is not). Also, we are using Sysmon in order to generate logs for SPLUNK in the advanced phase of this lab where we are going to focus on security of the domain.
+The configuration of Active Directory lab in practice desires one server machine - that will serve as domain controller - and the other one - client machine to test the work of domain. As mentioned earlier, we use VirtualBox as a hypervisor together with Windows Server 2012 R2 installations (server is promoted to domain controller, while the client is not). Due to environment baseline constraints, security telemetry and threat monitoring were implemented using native Windows Advanced Audit Policies and Process Command-Line Logging (Event ID 4688) rather than third-party agents, demonstrating enterprise audit compliance and native Event Log analysis.
 
 Domain controller needs to be configured in order to run other services, therefore we need to set network configuration (static IP for server), subnet mask, default gateway and DNS. Also, we need to add Active Directory Domain Services in Server Manager. We also created the default User so that we could join the domain from another Workstation.
 
