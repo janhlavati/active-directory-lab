@@ -25,5 +25,17 @@ Next, we have to configure the client machine's network configuration, otherwise
 <img width="1919" height="992" alt="Screenshot 2026-09-07 135938" src="https://github.com/user-attachments/assets/4b24ac5e-e467-466c-9b09-b2c48daa6c8d" />
 
 # Building the Enterprise Directory Structure
+Next step is building the Directory Structure for the company. We have decided for department-based approach, where we are sorting the organizational units by work departments in the company. Namely, the company has 4 different departments: IT, Finance, HR and Management. Each department has two separate organizational units; Workstations (devices in the network) and Users (people that are using those devices).
 
+<img width="1919" height="988" alt="Screenshot 2026-09-08 112420" src="https://github.com/user-attachments/assets/873f0936-b431-4cbd-ba5b-08f57d51983d" />
 
+### Automatization of User and Workstation Provisioning with PowerShell
+Manual addition of users and workstations is possible but very time consuming and redundant approach. With PowerShell we have the ability to automate this process. In order to follow this approach, we need two things: csv file that contains employees/devices information and PowerShell script that will take the information from the document and process it into AD DS.
+
+<img width="1919" height="990" alt="Screenshot 2026-09-08 112546" src="https://github.com/user-attachments/assets/d5c53fbb-4d65-4d6c-b2d4-f50a0d1b1534" />
+<img width="1919" height="988" alt="Screenshot 2026-09-08 112638" src="https://github.com/user-attachments/assets/7c241c19-302a-4d0e-9bf0-e9a6216a2582" />
+<img width="1919" height="993" alt="Screenshot 2026-09-08 112645" src="https://github.com/user-attachments/assets/eaaffae2-06e0-423d-9a45-5a1cde025010" />
+<img width="1919" height="992" alt="Screenshot 2026-09-08 112658" src="https://github.com/user-attachments/assets/82740056-1875-4f40-9060-c098fdf02175" />
+
+# Configuration of Group Policy Objects
+GPOs are important for domain security and its practicality. In this case we will apply password policy rules, map network drive to all users from company through GPO and restrict execution of applications from temporary directories.
