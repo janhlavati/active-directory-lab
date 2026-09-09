@@ -72,3 +72,8 @@ In Group Policy Management we have configured next audit policies:
 - Audit Audit Policy Change (detects attempts to disable logging)
 
 <img width="1919" height="981" alt="Screenshot 2026-09-08 151956" src="https://github.com/user-attachments/assets/2e7d830e-d501-481a-92b9-a9b0248e42b4" />
+
+### 2. Enabling Process Command-Line Logging
+Standard Process Creation logging only tells us that a program ran (e.g., cmd.exe). To see the exact command-line arguments (e.g., cmd.exe /c net user admin /add), we are enabling Command Line Process Auditing.
+
+<img width="1919" height="983" alt="Screenshot 2026-09-09 162845" src="https://github.com/user-attachments/assets/72d1e990-41a2-4462-9151-f3958ca199c4" />
